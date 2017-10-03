@@ -9,7 +9,7 @@
 		<input type="search" v-model="query" autofocus>
 		<button @click="search">Search</button>
 
-		<table class="table table-bordered">
+		<table class="table table-bordered" v-if="drugs.length">
 			<thead>
 				<tr>
 					<th>Name</th>
