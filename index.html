@@ -6,8 +6,30 @@
 </head>
 <body>
 	<div id="app">
-		<input type="search" v-model="query">
+		<input type="search" v-model="query" autofocus>
 		<button @click="search">Search</button>
+
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Price (Tshs)</th>
+					<th>Form</th>
+					<th>Strength</th>
+					<th>UOM</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="drug in drugs">
+					<td>{{ drug.name }}</td>
+					<td>{{ drug.price }}</td>
+					<td>{{ drug.form }}</td>
+					<td>{{ drug.strength }}</td>
+					<td>{{ drug.uom }}</td>
+				</tr>
+			</tbody>
+		</table>
+
 	</div>
 
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
