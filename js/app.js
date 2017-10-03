@@ -8,7 +8,7 @@ new Vue({
 		search: function() {
 			axios.get('http://htools-tz-msd-drug-tool-api.dokku-1.codefortanzania.org/api/drugs', {
 			    params: {
-			      name: 'paracetamol'
+			      name: this.query
 			    }
 			  })
 			  .then(function (response) {
